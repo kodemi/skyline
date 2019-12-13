@@ -1,0 +1,22 @@
+:global(.redux-toastr) {
+    font-size: 1.3rem;
+}
+
+:global(.material-icons) {
+    font-size: 1em;
+    vertical-align: top;
+}
+
+@media screen and (max-width:500px) {
+    :global(.redux-toastr) {
+        width: 100% !important;
+    }
+
+    :global(.redux-toastr.top-right) {
+        right: 0 !important;
+    }
+
+    :global(.redux-toastr .toastr) {
+        border-radius: 0 !important;
+    }
+}

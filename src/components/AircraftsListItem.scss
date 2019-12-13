@@ -1,0 +1,19 @@
+@import "~react-toolbox/lib/globals";
+@import "~react-toolbox/lib/list/config";
+
+.acType {
+    font-size: 2rem;
+    color: #aaa
+}
+
+.item {
+    padding: 1rem;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+@media screen and (min-width:500px) {
+    .item {
+        padding: 1rem $list-horizontal-padding;
+    }
+}

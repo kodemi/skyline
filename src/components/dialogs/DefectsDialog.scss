@@ -1,0 +1,17 @@
+.dialog_content {
+    height: 50vh !important;
+}
+
+.defect {
+    margin-bottom: 2rem;
+}
+
+.defect:last-of-type {
+    margin-bottom: 0;
+}
+
+@media screen and (max-height:500px) {
+    .dialog_content {
+        height: 90vh !important;
+    }
+}

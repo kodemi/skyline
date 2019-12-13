@@ -1,0 +1,137 @@
+<html>
+<head>
+    <style>
+        html {
+            background-color: #aaa;
+        }
+
+        body {
+            font-size: 14pt;
+            width: 842pt;
+            background-color: white;
+            margin: 0 auto;
+            padding: 20pt;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .title {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .report-date {
+            text-transform: uppercase;
+            position: absolute;
+            top: 1rem;
+            right: 0rem;
+            min-width: 12rem;
+            font-size: 0.8rem;
+        }
+
+        .aircraft-info, .inspections {
+            width: 100%;
+        }
+
+        .aircraft-info span {
+            padding-left: 0.5rem;
+        }
+
+        .aircraft-info td {
+            width: 50%;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .inspections {
+            margin-top: 2rem;
+            border: 1px solid #aaa;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .inspections thead {
+            background-color: #babfb0;
+        }
+
+        .inspections td, .inspections th {
+            border: 1px solid #eee;
+            padding: 0.2rem 0.5rem;
+            text-align: center;
+        }
+
+        .inspections td:first-of-type {
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="title">Aircraft inspections status</h1>
+        <span class="report-date">Report Date: {{ reportDate }}</span>
+    </header>
+
+    <table class="aircraft-info">
+        <tr>
+            <td>Date of Manufacturing: <span>{{ aircraft.dom }}</span></td>
+            <td>Date of Operation Start: <span>{{ aircraft.dos }}</span></td>
+        </tr>
+        <tr>
+            <td>Registration Number: <span>{{ aircraft.tailNumber }}</span></td>
+            <td>Serial Number: <span>{{ aircraft.serialNumber }}</span></td>
+        </tr>
+        <tr>
+            <td>Airframe Hours: <span>{{ aircraft.tsn }}</span></td>
+            <td>Airframe Cycles: <span>{{ aircraft.csn }}</span></td>
+        </tr>
+    </table>
+
+    <table class="inspections">
+        <thead>
+            <tr>
+                <th rowspan="2">Inspections</th>
+                <th colspan="3">Required Every</th>
+                <th colspan="3">Last Compliance</th>
+                <th colspan="3">Next Due</th>
+                <th colspan="3">Remaining</th>
+            </tr>
+            <tr>
+                <th>Hours</th>
+                <th>LDGS</th>
+                <th>MOS</th>
+                <th>Hours</th>
+                <th>LDGS</th>
+                <th>Date</th>
+                <th>Hours</th>
+                <th>LDGS</th>
+                <th>Date</th>
+                <th>Hours</th>
+                <th>LDGS</th>
+                <th>MOS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each aircraft.inspections}}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ requiredEvery.hours }}</td>
+                    <td>{{ requiredEvery.ldgs }}</td>
+                    <td>{{ requiredEvery.mos }}</td>
+                    <td>{{ lastCompliance.hours }}</td>
+                    <td>{{ lastCompliance.ldgs }}</td>
+                    <td>{{ lastCompliance.date }}</td>
+                    <td>{{ nextDue.hours }}</td>
+                    <td>{{ nextDue.ldgs }}</td>
+                    <td>{{ nextDue.date }}</td>
+                    <td>{{ remaining.hours }}</td>
+                    <td>{{ remaining.ldgs }}</td>
+                    <td>{{ remaining.mos }}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

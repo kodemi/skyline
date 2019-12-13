@@ -1,0 +1,56 @@
+.defect {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item_row {
+    line-height: 1.3;
+}
+
+.defect .item_row:last-of-type {
+    flex: 1 1 100%;
+}
+
+.defectDate_label, .defectType_label, .defectStatus_label, .defectDescription_label {
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+.defectDate_value, .defectType_value, .defectStatus_value {
+    padding-right: 0.5rem;
+}
+
+.defectDescription_value {
+    white-space: initial;
+    display: block;
+}
+
+.defectStatus__new {
+    color: red;
+}
+
+.defectStatus__work {
+    color: darkorange;
+}
+
+.defectStatus__resolved {
+    color: $color-primary;
+    font-weight: bold;
+}
+
+.defectDialog .label {
+    margin-bottom: 0.4rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.26);
+    line-height: 1.6rem;
+}
+
+@media screen and (max-width: 500px) {
+    .defect {
+        flex-direction: column;
+    }
+}

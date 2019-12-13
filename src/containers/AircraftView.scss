@@ -1,0 +1,68 @@
+@import "~react-toolbox/lib/globals";
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/table/config";
+
+.aircraft_remains {
+    color: #777;
+}
+
+.listContainer {
+    height: calc(100vh - 346px) !important;
+}
+
+.tailNumber {
+    font-weight: bold;
+    padding-top: 2rem;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.tailNumber:hover {
+    opacity: 0.6;
+}
+
+.acType {
+    font-size: 2rem;
+    color: #aaa;
+    font-weight: normal;
+    padding-left: 1rem;
+}
+
+.item {
+    padding: 0.5rem 0.5rem 1rem;
+}
+
+.emptyAircraft {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+.action_btn {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    z-index: 100;
+}
+
+.action_btn span {
+    line-height: 5.3rem !important;
+}
+
+
+
+@media screen and (min-width: 760px) {
+    .action_btn {
+        bottom: auto;
+        top: 133px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .listContainer {
+        height: calc(100vh - 375px) !important;
+    }
+}

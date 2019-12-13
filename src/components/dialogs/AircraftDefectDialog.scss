@@ -1,0 +1,31 @@
+.dialog {
+    max-width: 500px;
+}
+
+.datePickerWithAction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.datePickerWrapper {
+    width: 100%;
+}
+
+.label {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.defectTypeTitle {
+    line-height: 2rem;
+}
+
+.defectTypeGroup {
+    display: flex;
+}
+
+.defectTypeRadio {
+    margin-left: 1rem;
+}

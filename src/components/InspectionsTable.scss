@@ -1,0 +1,75 @@
+@import "~react-toolbox/lib/globals";
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/table/config";
+
+.table {
+    width: 100%;
+    overflow-y: auto;
+    font-size: $font-size-tiny;
+    color: $table-text-color;
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    tbody {
+        tr {
+            cursor: pointer;
+        }
+    }
+    tr {
+        height:  $font-size-tiny * 2.5;
+        line-height: $font-size-tiny;
+    }
+    th {
+        font-weight: $font-weight-bold;
+        border: none;
+        background-color: transparent;
+        font-size: 1.3rem;
+    }
+    th, td {
+        padding: 0 0.5rem;
+        user-select: none;
+    }
+    td:first-of-type {
+        font-weight: $font-weight-bold;
+        max-width: 10rem;
+    }
+}
+
+.table thead {
+    border-bottom: 1px solid $color-primary-light;
+}
+
+@media screen and (max-width: 500px) {
+    .table {
+        th, td {
+            padding: 0 .5rem;
+            font-size: $font-size-tiny * 0.9; 
+        }
+        tr {
+            height:  $font-size-tiny * 1.5;
+            line-height: $font-size-tiny;
+        }
+        thead {
+            margin-bottom: 0.5rem;
+        }
+        tbody:before {
+            content: "-";
+            display: block;
+            line-height: 0.5rem;
+            color: transparent;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .table {
+        th, td {
+            padding: 0 .5rem;
+            font-size: $font-size-tiny * 0.8; 
+        }
+        tr {
+            height:  $font-size-tiny * 1.5;
+            line-height: $font-size-tiny;
+        }
+    }
+}

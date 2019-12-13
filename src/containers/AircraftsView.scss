@@ -1,0 +1,14 @@
+.label {
+    font-size: 1.3rem;
+}
+
+.leftPane {
+    width: 25%;
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid #eee
+}
+
+.rightPane {
+    flex: 1 1 100%;
+}

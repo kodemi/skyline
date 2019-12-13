@@ -1,0 +1,44 @@
+.maintenances tr {
+    cursor: auto !important;
+}
+
+.cardTitle > div {
+    position: relative;
+    width: 100%;
+}
+
+.badges {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.badge {
+    color: white;
+    border-radius: 20rem;
+    padding: 0.5rem;
+    min-width: 2.6rem;
+    display: inline-block;
+    text-align: center;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.badge :last-of-type {
+    margin-right: 0;
+}
+
+.badge__new {
+    background-color: red;
+}
+
+.badge__work {
+    background-color: darkorange;
+}
+
+@media screen and (max-width:500px) {
+    .cardText {
+        padding: 0.5rem 0.5rem 0;
+    }
+}

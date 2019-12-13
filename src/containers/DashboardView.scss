@@ -1,0 +1,55 @@
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/globals";
+@import "~react-toolbox/lib/mixins";
+
+.card {
+    margin: 1% 0;
+    flex: 0 0 32%;
+    // max-width: 400px;
+
+    &:nth-child(3n-1) {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@media screen and (max-width:1350px) {
+    .card {
+        flex: 0 0 48%;
+
+        &:nth-child(n) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(2n-1) {
+            margin-right: 2%;
+        }
+    }
+}
+
+@media screen and (max-width:880px) {
+    .card {
+        flex: 0 0 100%;
+
+        &:nth-child(n) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .card {
+        margin: 5px;
+    }
+}
