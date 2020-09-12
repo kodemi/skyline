@@ -73,7 +73,7 @@
     "mongoose-pass": "1.0.3",
     "morgan": "1.7.0",
     "nock": "8.0.0",
-    "node-fetch": "1.6.1",
+    "node-fetch": "2.6.1",
     "query-string": "4.2.3",
     "react": "15.2.1",
     "react-custom-scrollbars": "4.0.0",
