@@ -63,7 +63,7 @@
     "express-history-api-fallback": "2.0.0",
     "handlebars": "4.0.6",
     "intl": "1.2.5",
-    "jsonwebtoken": "7.1.9",
+    "jsonwebtoken": "9.0.0",
     "jwt-decode": "2.1.0",
     "lodash": "4.17.2",
     "moment": "2.14.1",
